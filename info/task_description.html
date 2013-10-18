@@ -1,3 +1,40 @@
+<script type="text/javascript">
+    /**
+ * SyntaxHighlighter
+ * http://alexgorbatchev.com/SyntaxHighlighter
+ *
+ * SyntaxHighlighter is donationware. If you are using it, please donate.
+ * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
+ *
+ * @version
+ * 3.0.83 (July 02 2010)
+ *
+ * @copyright
+ * Copyright (C) 2004-2010 Alex Gorbatchev.
+ *
+ * @license
+ * Dual licensed under the MIT and GPL licenses.
+ */
+;(function()
+{
+	// CommonJS
+	typeof(require) != 'undefined' ? SyntaxHighlighter = require('shCore').SyntaxHighlighter : null;
+
+	function Brush()
+	{
+	};
+
+	Brush.prototype	= new SyntaxHighlighter.Highlighter();
+	Brush.aliases	= ['text', 'plain'];
+
+	SyntaxHighlighter.brushes.Plain = Brush;
+
+	// CommonJS
+	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
+})();
+
+</script>
+
 <p>
     We have logs from different web sites. These logs contains information about users http(https) requests.
     For analysing this data we need to parse and collect information from these logs.
@@ -7,11 +44,11 @@
     A log file is a text, where each request is represented as a string.
     The strings are separated by newline "\n".
     Request contains timestamp, username and URL.
-    These fields are separated by <strong>";;"</strong>.
+    These fields are separated by <strong>";;"</strong>.<br>
     Timestamps are represented in the next format:<br>
     <strong>YYYY-MM-DD-hh-mm-ss</strong>, where YYYY-MM-DD is a date, hh-mm-ss is a time.<br>
-    An username contains only letters, digits and underscore.<br>
-    URL is given in the normalized form (for example: http://checkio.org).
+    Usernames contains only letters, digits and underscore.<br>
+    URL is given in the normalized form (for example: http://checkio.org).<br>
     All fields are case-insensitive and must be converted in the lowercase.
 </p>
 
@@ -24,22 +61,24 @@
 </p>
 
 <div>
-    For example (the numbers inside brackets are given just for explanation):
-    <pre>
-2013-01-01-01-00-00;;Name;;http://checkio.org/task    (1)
-2013-01-01-01-02-00;;name;;http://checkio.org/task2    (2)
-2013-01-01-01-31-00;;Name;;https://admin.checkio.org    (3)
-2013-01-01-03-00-00;;Name;;http://www.checkio.org/profile    (4)
-2013-01-01-03-00-01;;Name;;http://example.com    (5)
-2013-02-03-04-00-00;;user2;;http://checkio.org/task    (6)
-2013-01-01-03-11-00;;Name;;http://checkio.org/task    (7)
+    For example:
+    <pre class="brush: plain">
+2013-01-01-01-00-00;;Name;;http://checkio.org/task
+2013-01-01-01-02-00;;name;;http://checkio.org/task2
+2013-01-01-01-31-00;;Name;;https://admin.checkio.org
+2013-01-01-03-00-00;;Name;;http://www.checkio.org/profile
+2013-01-01-03-00-01;;Name;;http://example.com
+2013-02-03-04-00-00;;user2;;http://checkio.org/task
+2013-01-01-03-11-00;;Name;;http://checkio.org/task
 </pre>
+    </div>
+<p>
     This log contains 4 sessions. First three requests (1-3) are created by "Name" ("name") at the same site <em>checkio.org</em>
     and here is no more than 30 minutes between "neighbour" requests.
-    The second session contains two requests (4, 7) from "Name" at checkio.org (more than 30 minutes from 01:31:00 request).
-    The next is the request (5) at example.com. And the last session is the request (6) from "user2" at checkio.org.
-</div>
-
+    The second session contains two requests (4, 7) from "Name" at <em>checkio.org</em> (more than 30 minutes from 01:31:00 request).
+    The next is the request (5) at <em>example.com</em>.
+    And the last session is the request (6) from "user2" at <em>checkio.org</em>.
+</p>
 <p>
     The results should contain information about sessions in the next format:<br>
     <strong>username;;site;;duration;;quantity_of_requests</strong><br>
@@ -56,7 +95,7 @@
 
 <div>
     The previous log text will be processed in:
-<pre>
+<pre class="brush: plain">
 name;;example.com;;1;;1
 name;;checkio.org;;661;;2
 name;;checkio.org;;1861;;3
