@@ -1,39 +1,12 @@
-<script type="text/javascript">
-    /**
- * SyntaxHighlighter
- * http://alexgorbatchev.com/SyntaxHighlighter
- *
- * SyntaxHighlighter is donationware. If you are using it, please donate.
- * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
- *
- * @version
- * 3.0.83 (July 02 2010)
- *
- * @copyright
- * Copyright (C) 2004-2010 Alex Gorbatchev.
- *
- * @license
- * Dual licensed under the MIT and GPL licenses.
- */
-;(function()
-{
-	// CommonJS
-	typeof(require) != 'undefined' ? SyntaxHighlighter = require('shCore').SyntaxHighlighter : null;
-
-	function Brush()
-	{
-	};
-
-	Brush.prototype	= new SyntaxHighlighter.Highlighter();
-	Brush.aliases	= ['text', 'plain'];
-
-	SyntaxHighlighter.brushes.Plain = Brush;
-
-	// CommonJS
-	typeof(exports) != 'undefined' ? exports.Brush = Brush : null;
-})();
-
-</script>
+<style>
+    pre {
+        border: solid #696969 1px;
+        background-color: white;
+        padding: 2px;
+        font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+        overflow: auto;
+    }
+</style>
 
 <p>
     We have logs from different web sites. These logs contains information about users http(https) requests.
@@ -62,7 +35,7 @@
 
 <div>
     For example:
-    <pre class="brush: plain">
+    <pre>
 2013-01-01-01-00-00;;Name;;http://checkio.org/task
 2013-01-01-01-02-00;;name;;http://checkio.org/task2
 2013-01-01-01-31-00;;Name;;https://admin.checkio.org
@@ -70,6 +43,7 @@
 2013-01-01-03-00-01;;Name;;http://example.com
 2013-01-01-03-11-00;;Name;;http://checkio.org/task
 2013-02-03-04-00-00;;user2;;http://checkio.org/task
+
 </pre>
     </div>
 <p>
@@ -95,7 +69,7 @@
 
 <div>
     The previous log text will be processed in:
-<pre class="brush: plain">
+<pre>
 name;;example.com;;1;;1
 name;;checkio.org;;661;;2
 name;;checkio.org;;1861;;3
