@@ -57,7 +57,7 @@
     The session is a sequence of the user requests at the same site (second-level domain),
     where each request is no more than 30 minutes older than the previous request from that user at the same site.
     We compare URL by second-level domain name, so admin.checkio.org and www.checkio.org are the same site.
-    The requests are not sorted.
+    The requests are sorted by time.
 </p>
 
 <div>
@@ -68,8 +68,8 @@
 2013-01-01-01-31-00;;Name;;https://admin.checkio.org
 2013-01-01-03-00-00;;Name;;http://www.checkio.org/profile
 2013-01-01-03-00-01;;Name;;http://example.com
-2013-02-03-04-00-00;;user2;;http://checkio.org/task
 2013-01-01-03-11-00;;Name;;http://checkio.org/task
+2013-02-03-04-00-00;;user2;;http://checkio.org/task
 </pre>
     </div>
 <p>
