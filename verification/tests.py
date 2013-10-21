@@ -29,8 +29,9 @@ user2;;checkio.org;;1;;1""",
 2013-01-01-01-37-40;;User2;;http://checkio.org/blog/
 2013-01-02-01-00-00;;User2;;http://checkio.org/info/task/1""",
          "answer": """user1;;checkio.org;;663;;2
+user2;;checkio.org;;1;;1
 user2;;checkio.org;;1661;;3
-user2;;checkio.org;;1;;1"""}
+"""}
             ],
         "Extra":[
     {

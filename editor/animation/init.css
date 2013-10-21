@@ -36,26 +36,35 @@
     color: #696969;
     font-family: verdana;
     font-size: 15px;
-    width: 100%;
+    /*width: 100%;*/
 }
 
-.animation-content .call,
-.animation-content .answer,
-.animation-content .output{
+.animation-content .call div,
+.animation-content .answer div,
+.animation-content .output div,
+.animation-content .result{
     font-weight: bold;
-    padding: 10px;
-    border: 2px dotted #a9a9a9;
+    /*border: 2px dotted #a9a9a9;*/
     margin: 10px;
     color: black;
     text-align: center;
     letter-spacing: 0.7px;
-    word-break: break-word;
-    white-space: pre-wrap;
 }
 
-.animation-content .error{
+.animation-content .error div{
     color: #de0202;
     border-color: #de0202;
+}
+
+.animation-content pre {
+    text-align: left;
+    border: solid #696969 1px;
+    background-color: white;
+    padding: 2px;
+    font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+    /*overflow: auto;*/
+    min-height: 23px;
+    margin: 0 10px 0 10px;
 }
 
 .tryit-content {
