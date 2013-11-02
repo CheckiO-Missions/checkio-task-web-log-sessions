@@ -17,9 +17,9 @@ TESTS = {
 2013-01-01-03-00-01;;Name;;http://example.com
 2013-02-03-04-00-00;;user2;;http://checkio.org/task
 2013-01-01-03-11-00;;Name;;http://checkio.org/task""",
-            "answer": """name;;example.com;;1;;1
-name;;checkio.org;;661;;2
+            "answer": """name;;checkio.org;;661;;2
 name;;checkio.org;;1861;;3
+name;;example.com;;1;;1
 user2;;checkio.org;;1;;1""",
         },
         {"input": """2013-01-01-01-00-00;;user1;;http://new.checkio.org
@@ -30,8 +30,7 @@ user2;;checkio.org;;1;;1""",
 2013-01-02-01-00-00;;User2;;http://checkio.org/info/task/1""",
          "answer": """user1;;checkio.org;;663;;2
 user2;;checkio.org;;1;;1
-user2;;checkio.org;;1661;;3
-"""}
+user2;;checkio.org;;1661;;3"""}
             ],
         "Extra":[
     {
