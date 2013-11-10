@@ -9,24 +9,24 @@
 </style>
 
 <p>
-    We have logs from different web sites. These logs contains information about users http(https) requests.
-    For analysing this data we need to parse and collect information from these logs.
+    We have logs from different web sites. These logs contain information about users http(https) requests.
+    To analyse this data we need to parse and collect information from these logs.
 </p>
 
 <p>
-    A log file is a text, where each request is represented as a string.
-    The strings are separated by newline "\n".
-    Request contains timestamp, username and URL.
+    A log file is a text file, where each request is represented as a string.
+    The strings are separated by a newline "\n".
+    Requests contain a timestamp, username and URL.
     These fields are separated by <strong>";;"</strong>.<br>
-    Timestamps are represented in the next format:<br>
+    Timestamps are represented in the following format:<br>
     <strong>YYYY-MM-DD-hh-mm-ss</strong>, where YYYY-MM-DD is a date, hh-mm-ss is a time.<br>
-    Usernames contains only letters, digits and underscore.<br>
-    URL is given in the normalized form (for example: http://checkio.org).<br>
+    Usernames contain only letters, digits and an underscore.<br>
+    A URL is given in the normalized form (for example: http://checkio.org).<br>
     All fields are case-insensitive and must be converted in the lowercase.
 </p>
 
 <p>
-    You should collect the information about users sessions from given logs.
+    You should collect the information about user sessions from given logs.
     The session is a sequence of the user requests at the same site (second-level domain),
     where each request is no more than 30 minutes older than the previous request from that user at the same site.
     We compare URL by second-level domain name, so admin.checkio.org and www.checkio.org are the same site.
@@ -60,7 +60,7 @@
     <em>username</em> is a username from logs.<br>
     <em>site</em> is a second-level domain.<br>
     <em>duration</em> is a time from first to last requests in seconds. The seconds are calculated inclusively.
-        If in the session only one requests, then it has 1 second duration.
+        If there's only one request in the session, then it has 1 second duration.
         For example: two requests at 00:00:00 and 00:00:02 -- 3 seconds duration.<br>
     <em>quantity_of_requests</em> is a quantity of request in the session.<br>
     The sessions strings should be separated by newline ("\n") and sorted in the ascending order by next priorities:
