@@ -42,12 +42,14 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             var checkioInput = data.in;
 
             if (data.error) {
-                $content.find('.call').html('Fail: checkio(' + JSON.stringify(checkioInput) + ')');
-                $content.find('.output').html(data.error.replace(/\n/g, ","));
+                $content.find('.call pre').text(checkioInput);
+                $content.find('.output div').html(data.error.replace(/\n/g, ","));
 
                 $content.find('.output').addClass('error');
                 $content.find('.call').addClass('error');
                 $content.find('.answer').remove();
+                $content.find('.output pre').remove();
+                $content.find('.result').remove();
                 $content.find('.explanation').remove();
                 this_e.setAnimationHeight($content.height() + 60);
                 return false;

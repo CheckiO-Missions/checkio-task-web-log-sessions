@@ -69,7 +69,6 @@ tests = [
         ["admin", "hubspot.com", 9, datetime(2013, 4, 11, 10, 0, 0)],
         ["simple_user", "hubspot.com", 9, datetime(2013, 4, 11, 12, 10, 0)],
         ["user1", "hubspot.com", 9, datetime(2013, 4, 11, 12, 0, 23)]
-
     ],
 
 ]
