@@ -42,6 +42,7 @@
 .animation-content .call div,
 .animation-content .answer div,
 .animation-content .output div,
+.animation-content .diff div,
 .animation-content .result{
     font-weight: bold;
     /*border: 2px dotted #a9a9a9;*/

@@ -51,6 +51,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 $content.find('.output pre').remove();
                 $content.find('.result').remove();
                 $content.find('.explanation').remove();
+//                $content.find('.diff').remove();
                 this_e.setAnimationHeight($content.height() + 60);
                 return false;
             }
@@ -70,8 +71,10 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             if (!result) {
                 $content.find('.result div').text("Fail!");
                 $content.find('.answer pre').text(rightResult);
+//                $content.find('.diff pre').text(result_addon);
 
                 $content.find('.answer').addClass('error');
+//                $content.find('.diff').addClass('error');
                 $content.find('.result').addClass('error');
                 $content.find('.output').addClass('error');
                 $content.find('.call').addClass('error');
@@ -79,6 +82,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             else {
                 $content.find('.result div').text("Pass.");
                 $content.find('.answer').remove();
+//                $content.find('.diff').remove();
             }
             //Dont change the code before it
 
