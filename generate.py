@@ -54,22 +54,35 @@ usernames = {
 }
 
 tests = [
+    #[
+    #    ["user1", "checkio.org", 2, datetime(2013, 1, 1, 1, 0, 0)],
+    #    ["user2", "checkio.org", 3, datetime(2013, 1, 1, 1, 10, 0)],
+    #    ["user2", "checkio.org", 1, datetime(2013, 1, 2, 1, 0, 0)]
+    #],
+    #[
+    #    ["admin", "example.org", 10, datetime(2013, 2, 11, 10, 0, 0)],
+    #    ["simple_user", "hubspot.com", 4, datetime(2013, 2, 11, 12, 10, 0)],
+    #    ["admin", "example.com", 2, datetime(2013, 3, 10, 1, 0, 0)]
+    #
+    #],
+    #[
+    #    ["admin", "hubspot.com", 9, datetime(2013, 4, 11, 10, 0, 0)],
+    #    ["simple_user", "hubspot.com", 9, datetime(2013, 4, 11, 12, 10, 0)],
+    #    ["user1", "hubspot.com", 9, datetime(2013, 4, 11, 12, 0, 23)]
+    #],
+    #[
+    #    ["simple_user", "hubspot.com", 10, datetime(2013, 4, 11, 10, 0, 0)],
+    #    ["simple_user", "checkio.org", 10, datetime(2013, 4, 11, 11, 10, 0)],
+    #],
     [
-        ["user1", "checkio.org", 2, datetime(2013, 1, 1, 1, 0, 0)],
-        ["user2", "checkio.org", 3, datetime(2013, 1, 1, 1, 10, 0)],
-        ["user2", "checkio.org", 1, datetime(2013, 1, 2, 1, 0, 0)]
+        ["simple_user", "hubspot.com", 3, datetime(2013, 10, 1, 10, 0, 0)],
+        ["user1", "hubspot.com", 3, datetime(2013, 10, 1, 1, 0, 0)],
+        ["user2", "hubspot.com", 3, datetime(2013, 10, 1, 10, 15, 3)],
+        ["admin", "checkio.org", 3, datetime(2013, 10, 1, 4, 10, 0)],
+        ["user1", "checkio.org", 3, datetime(2013, 10, 1, 3, 10, 0)],
     ],
-    [
-        ["admin", "example.org", 10, datetime(2013, 2, 11, 10, 0, 0)],
-        ["simple_user", "hubspot.com", 4, datetime(2013, 2, 11, 12, 10, 0)],
-        ["admin", "example.com", 2, datetime(2013, 3, 10, 1, 0, 0)]
 
-    ],
-    [
-        ["admin", "hubspot.com", 9, datetime(2013, 4, 11, 10, 0, 0)],
-        ["simple_user", "hubspot.com", 9, datetime(2013, 4, 11, 12, 10, 0)],
-        ["user1", "hubspot.com", 9, datetime(2013, 4, 11, 12, 0, 23)]
-    ],
+
 
 ]
 
