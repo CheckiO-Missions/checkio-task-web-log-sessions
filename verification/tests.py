@@ -135,6 +135,13 @@ simple_user;;hubspot.com;;8944;;10"""},
 simple_user;;hubspot.com;;1859;;3
 user1;;checkio.org;;2414;;3
 user1;;hubspot.com;;2228;;3
-user2;;hubspot.com;;2379;;3"""}
+user2;;hubspot.com;;2379;;3"""},
+
+        {
+            "input": """2013-01-01-01-00-00;;name;;http://checkio.org/task2
+2013-02-01-01-00-00;;Name;;https://admin.checkio.org""",
+
+            "answer": """name;;checkio.org;;1;;1
+name;;checkio.org;;1;;1"""},
     ]
 }
